@@ -5,21 +5,21 @@ import Script from "next/script";
 import { getAllBlogPostsList } from "../db/blog";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Digital Garden / Thoughts",
   description:
-    "Read Onurhan Demir's thoughts on software development, design, React, Next.js, TypeScript, and modern web technologies. Articles about building web applications and B2B SaaS solutions.",
+    "A casual digital garden of notes from Sefa Oruc on digital nomad life, random observations, startup lessons, Turkish recipes, and internet projects.",
   keywords: [
-    "Onurhan Demir Blog",
-    "Software Development Blog",
-    "React Blog",
-    "Next.js Blog",
-    "TypeScript Blog",
-    "Web Development Articles",
+    "Sefa Oruc Digital Garden",
+    "Digital Nomad Notes",
+    "Startup Lessons",
+    "Random Observations",
+    "Turkish Recipes",
+    "Internet Projects",
   ],
   openGraph: {
-    title: "Blog | Onurhan Demir",
+    title: "Digital Garden / Thoughts | Sefa Oruc",
     description:
-      "Read Onurhan Demir's thoughts on software development, design, and modern web technologies.",
+      "A casual digital garden of notes from Sefa Oruc on digital nomad life, random observations, startup lessons, Turkish recipes, and internet projects.",
     url: "https://onurhan.dev/blog",
   },
   alternates: {
@@ -40,18 +40,18 @@ export default async function Blog() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": `${baseUrl}/blog`,
-    name: "Blog | Onurhan Demir",
+    name: "Digital Garden / Thoughts | Sefa Oruc",
     description:
-      "Read Onurhan Demir's thoughts on software development, design, React, Next.js, TypeScript, and modern web technologies. Articles about building web applications and B2B SaaS solutions.",
+      "A casual digital garden of notes from Sefa Oruc on digital nomad life, random observations, startup lessons, Turkish recipes, and internet projects.",
     url: `${baseUrl}/blog`,
     mainEntity: {
       "@type": "Blog",
-      name: "Onurhan Demir's Blog",
+      name: "Sefa Oruc's Digital Garden",
       description:
-        "Software development articles, tutorials, and insights on React, Next.js, TypeScript, and modern web technologies.",
+        "Loose notes on digital nomad life, random observations, startup lessons, Turkish recipes, and internet projects.",
       author: {
         "@type": "Person",
-        name: "Onurhan Demir",
+        name: "Sefa Oruc",
         url: baseUrl,
       },
       blogPost: posts.map((post) => ({
@@ -74,6 +74,16 @@ export default async function Blog() {
           __html: JSON.stringify(blogCollectionJsonLd),
         }}
       />
+      <div className="mb-8">
+        <h1 className="text-lg font-medium tracking-tight mb-3">
+          Digital Garden / Thoughts
+        </h1>
+        <p className="text-[15px] leading-relaxed opacity-70">
+          Loose notes, tiny lessons, recipes, observations, and half-polished
+          thoughts from building, moving around, and spending too much time on
+          the internet.
+        </p>
+      </div>
       <BlogPaginatedList posts={posts} />
     </Container>
   );

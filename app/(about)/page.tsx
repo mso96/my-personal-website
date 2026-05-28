@@ -1,29 +1,30 @@
 import Container from "@/components/shared/container";
 import Social from "@/components/social";
 import { KizzleCTA } from "@/components/kizzle-cta";
+import { SoundCloudEmbed } from "@/components/soundcloud-embed";
+import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Onurhan Demir is a Software Developer and Founder of Kizzle Studio, specializing in full-stack development, building comprehensive web applications, B2B SaaS solutions, and e-commerce platforms. Based in Turkey.",
+    "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
   keywords: [
-    "Onurhan Demir",
-    "Onurhan Demir About",
-    "Onurhan Demir Software Developer",
-    "Onurhan Demir Türkiye",
-    "Kizzle Studio",
-    "Software Developer",
-    "Full Stack Developer",
-    "Software Developer Turkey",
-    "Yazılım Geliştirici Türkiye",
-    "Full Stack Developer Türkiye",
+    "Sefa Oruc",
+    "Sefa Oruc About",
+    "Sefa Oruc Marketing Engineer",
+    "Wubbie Studio",
+    "Londonmaxxing",
+    "Marketing Engineer",
+    "Growth Marketing",
+    "Digital Experiences",
+    "London Tech Community",
   ],
   openGraph: {
-    title: "About | Onurhan Demir",
+    title: "About | Sefa Oruc",
     description:
-      "Onurhan Demir is a Software Developer and Founder of Kizzle Studio, specializing in full-stack development, building comprehensive web applications, B2B SaaS solutions, and e-commerce platforms.",
+      "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
     url: "https://onurhan.dev",
   },
   alternates: {
@@ -34,80 +35,111 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Onurhan Demir",
-  alternateName: "Onurhan",
-  jobTitle: "Software Developer & Founder",
+  name: "Sefa Oruc",
+  alternateName: "Sefa",
+  jobTitle: "Marketing Engineer & Founder",
   url: "https://onurhan.dev",
   description:
-    "Software Developer and Founder of Kizzle Studio, specializing in full-stack development, building comprehensive web applications, B2B SaaS solutions, and e-commerce platforms. Expert in React, Next.js, TypeScript, and modern web technologies.",
+    "London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
   knowsAbout: [
-    "Software Development",
-    "Web Development",
-    "Full Stack Development",
-    "E-commerce Development",
-    "Shopify",
-    "Ikas",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "B2B SaaS",
-    "Yazılım Geliştirme",
-    "Web Geliştirme",
-    "Full Stack Geliştirme",
+    "Marketing Engineering",
+    "Growth Marketing",
+    "Digital Experiences",
+    "Startups",
+    "Community Building",
+    "Internet Culture",
+    "AI Tools",
+    "Storytelling",
   ],
   sameAs: [
-    "https://github.com/onurhan1337",
-    "https://youtube.com/@onurhandev",
-    "https://x.com/onurhan1337",
-    "https://kizzle.studio",
+    "https://x.com/msefaoruc",
+    "https://www.linkedin.com/in/mso96",
   ],
   worksFor: {
     "@type": "Organization",
-    name: "Kizzle Studio",
-    url: "https://kizzle.studio",
+    name: "Wubbie Studio",
     description:
-      "E-commerce development studio specializing in Shopify, Ikas, and custom solutions.",
+      "Marketing, growth, and digital experiences studio working with startups.",
   },
   address: {
     "@type": "PostalAddress",
-    addressCountry: "TR",
-    addressLocality: "Turkey",
-    alternateName: "Türkiye",
+    addressCountry: "GB",
+    addressLocality: "London",
   },
   nationality: {
     "@type": "Country",
-    name: "Turkey",
-    alternateName: "Türkiye",
+    name: "United Kingdom",
   },
   jobLocation: {
     "@type": "Place",
-    name: "Turkey",
-    alternateName: "Türkiye",
+    name: "London",
     address: {
       "@type": "PostalAddress",
-      addressCountry: "TR",
-      addressLocality: "Turkey",
+      addressCountry: "GB",
+      addressLocality: "London",
     },
   },
 };
 
 export default function About() {
-  const paragraphs = [
-    `I'm a Software Developer and Founder of Kizzle Studio, an e-commerce development studio specializing in Shopify and Ikas platforms. We build custom solutions from corporate invoicing workflows to AI-powered analytics for ambitious commerce brands.`,
-    `I move fast and iterate. Ship, gather feedback, improve, repeat. I write clean, maintainable code while keeping velocity high. Balance matters—quality and speed go hand in hand.`,
-    `When I'm not building Kizzle Studio, I'm experimenting with new tech and building side projects. Always learning, always building, always shipping.`,
-  ];
-
   return (
     <Container
       size="large"
       className="prose prose-zinc container animate-enter"
     >
       <p className="text-lg font-medium tracking-tight mb-8">
-        Hi, I&apos;m Onurhan.
+        Hi, I&apos;m Sefa.
       </p>
-      {paragraphs.map((paragraph, index) => (
+      {[
+        <>
+          I&apos;m a Marketing Engineer and founder of{" "}
+          <Link
+            href="https://wubbiestudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline decoration-foreground/20 underline-offset-4 transition hover:decoration-foreground/60"
+          >
+            Wubbie Studio
+          </Link>
+          , where I work with startups on marketing, growth, and digital
+          experiences. I like building things that sit between technology,
+          storytelling, and internet culture.
+        </>,
+        <>
+          Alongside client work, we are building{" "}
+          <Link
+            href="https://londonmaxxing.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline decoration-foreground/20 underline-offset-4 transition hover:decoration-foreground/60"
+          >
+            Londonmaxxing
+          </Link>
+          . The movement making London the greatest city in the world to live
+          and build in through curated events, stories, and hidden gems. You can
+          follow us on{" "}
+          <Link
+            href="https://x.com/londonmaxxing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline decoration-foreground/20 underline-offset-4 transition hover:decoration-foreground/60"
+          >
+            Twitter
+          </Link>
+          .
+        </>,
+        <>
+          I move fast, test ideas, and iterate constantly. I enjoy turning messy
+          ideas into real products, communities, and experiences people
+          genuinely care about.
+        </>,
+        <>
+          Outside of work, I&apos;m usually experimenting with AI tools, vibe
+          coding random side projects, filming content, joining hackathons, or
+          driving my RC car around London. Always building, always shipping,
+          always exploring new things.
+        </>,
+      ].map((paragraph, index, paragraphs) => (
         <div
           key={index}
           style={
@@ -126,8 +158,19 @@ export default function About() {
           {index === 0 && <hr className="border-foreground/10 my-8" />}
         </div>
       ))}
+      <figure className="not-prose mb-8 overflow-hidden rounded-lg border border-foreground/10 bg-background">
+        <img
+          src="/londonmaxxing/londonmaxxing-friends.jpeg"
+          alt="Sefa with Charlie, Sarah Drinkwater, Ash, and Ese"
+          className="block w-full object-cover"
+        />
+        <figcaption className="px-3 py-2 text-xs leading-relaxed opacity-55">
+          I, Charlie, Sarah Drinkwater, Ash and Ese.
+        </figcaption>
+      </figure>
       <KizzleCTA />
       <Social />
+      <SoundCloudEmbed />
       <Script
         id="structured-data"
         type="application/ld+json"

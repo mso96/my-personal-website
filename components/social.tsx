@@ -2,7 +2,7 @@
 
 import type { SocialButtonProps } from "@/types";
 import IconArrowRightUp from "./shared/icons/arrow-right-up";
-import IconGithub from "./shared/icons/github";
+import IconLinkedIn from "./shared/icons/linkedin";
 import IconX from "./shared/icons/x";
 
 import Link from "next/link";
@@ -27,16 +27,16 @@ function SocialButton({ href, children }: SocialButtonProps) {
 export default function Social() {
   return (
     <div className="flex flex-col gap-2 md:flex-row md:gap-2">
-      <SocialButton href="https://github.com/onurhan1337">
-        <div className="flex flex-row items-center">
-          <IconGithub />
-          <span className="ml-3 text-[15px] tracking-tight">Github</span>
-        </div>
-      </SocialButton>
-      <SocialButton href="https://x.com/onurhan1337">
+      <SocialButton href="https://x.com/msefaoruc">
         <div className="flex flex-row items-center">
           <IconX />
           <span className="ml-3 text-[15px] tracking-tight">X / Twitter</span>
+        </div>
+      </SocialButton>
+      <SocialButton href="https://www.linkedin.com/in/mso96">
+        <div className="flex flex-row items-center">
+          <IconLinkedIn />
+          <span className="ml-3 text-[15px] tracking-tight">LinkedIn</span>
         </div>
       </SocialButton>
     </div>

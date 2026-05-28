@@ -1,27 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
 import { Header } from "@/components/header";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
-  adjustFontFallback: false,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL || "https://onurhan.dev"
   ),
   title: {
-    default: "Onurhan Demir - Software Developer | Full Stack Engineer",
-    template: "%s | Onurhan Demir",
+    default: "Sefa Oruc - London-based Marketing Engineer",
+    template: "%s | Sefa Oruc",
   },
   description:
-    "Onurhan Demir is a Software Developer and Founder of Kizzle Studio, specializing in full-stack development, building comprehensive web applications, B2B SaaS solutions, and e-commerce platforms. Expert in React, Next.js, TypeScript, and modern web technologies.",
+    "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
   referrer: "origin-when-cross-origin",
   formatDetection: {
     email: false,
@@ -29,31 +21,26 @@ export const metadata: Metadata = {
     telephone: false,
   },
   keywords: [
-    "Onurhan Demir",
-    "Onurhan Demir Software Developer",
-    "Onurhan Demir Full Stack Developer",
-    "Onurhan Demir React Developer",
-    "Onurhan Demir Türkiye",
-    "Onurhan Demir Yazılım Geliştirici",
-    "Software Developer",
-    "Full Stack Developer",
-    "Web Developer",
-    "React Developer",
-    "Next.js Developer",
-    "TypeScript Developer",
-    "Yazılım Geliştirici Türkiye",
-    "Full Stack Developer Türkiye",
-    "React Developer Türkiye",
+    "Sefa Oruc",
+    "Sefa Oruc Marketing Engineer",
+    "Wubbie Studio",
+    "Londonmaxxing",
+    "Marketing Engineer",
+    "Growth Marketing",
+    "Digital Experiences",
+    "London Tech Community",
+    "AI Tools",
+    "Internet Culture",
   ],
-  authors: [{ name: "Onurhan Demir", url: "https://onurhan.dev" }],
-  creator: "Onurhan Demir",
-  publisher: "Onurhan Demir",
+  authors: [{ name: "Sefa Oruc", url: "https://onurhan.dev" }],
+  creator: "Sefa Oruc",
+  publisher: "Sefa Oruc",
   openGraph: {
-    title: "Onurhan Demir - Software Developer | Full Stack Engineer",
+    title: "Sefa Oruc - London-based Marketing Engineer",
     description:
-      "Onurhan Demir is a Software Developer and Founder of Kizzle Studio, specializing in full-stack development, building comprehensive web applications, B2B SaaS solutions, and e-commerce platforms.",
+      "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
     url: "https://onurhan.dev",
-    siteName: "Onurhan Demir - Software Developer",
+    siteName: "Sefa Oruc - Marketing Engineer",
     locale: "en_US",
     alternateLocale: ["tr_TR"],
     type: "website",
@@ -79,12 +66,12 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Onurhan Demir - Software Developer",
+    title: "Sefa Oruc - London-based Marketing Engineer",
     card: "summary_large_image",
-    site: "@onurhan1337",
-    creator: "@onurhan1337",
+    site: "@msefaoruc",
+    creator: "@msefaoruc",
     description:
-      "Software Developer and Founder of Kizzle Studio, specializing in full-stack development, e-commerce platforms, and modern web technologies.",
+      "London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
   },
   verification: {
     google: "K1pkJ72cY3DylswXke2MHJGxmjJ91WXwgozcCICvFrU",
@@ -110,60 +97,54 @@ export default function RootLayout({
   const personStructuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Onurhan Demir",
-    alternateName: "Onurhan",
-    jobTitle: "Software Developer & Founder",
+    name: "Sefa Oruc",
+    alternateName: "Sefa",
+    jobTitle: "Marketing Engineer & Founder",
     url: "https://onurhan.dev",
     description:
-      "Software Developer and Founder of Kizzle Studio, specializing in full-stack development, building comprehensive web applications, B2B SaaS solutions, and e-commerce platforms. Expert in React, Next.js, TypeScript, and modern web technologies.",
+      "London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
     knowsAbout: [
-      "Software Development",
-      "Web Development",
-      "Full Stack Development",
-      "E-commerce Development",
-      "Shopify",
-      "Ikas",
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "B2B SaaS",
-      "Yazılım Geliştirme",
-      "Web Geliştirme",
-      "Full Stack Geliştirme",
+      "Marketing Engineering",
+      "Growth Marketing",
+      "Digital Experiences",
+      "Startups",
+      "Community Building",
+      "Internet Culture",
+      "AI Tools",
+      "Storytelling",
     ],
     sameAs: [
-      "https://github.com/onurhan1337",
-      "https://youtube.com/@onurhandev",
-      "https://x.com/onurhan1337",
-      "https://kizzle.studio",
+      "https://x.com/msefaoruc",
+      "https://www.linkedin.com/in/mso96",
     ],
     worksFor: {
       "@type": "Organization",
-      name: "Kizzle Studio",
-      url: "https://kizzle.studio",
+      name: "Wubbie Studio",
       description:
-        "E-commerce development studio specializing in Shopify, Ikas, and custom solutions.",
+        "Marketing, growth, and digital experiences studio working with startups.",
     },
     address: {
       "@type": "PostalAddress",
-      addressCountry: "TR",
-      addressLocality: "Turkey",
+      addressCountry: "GB",
+      addressLocality: "London",
     },
     nationality: {
       "@type": "Country",
-      name: "Turkey",
-      alternateName: "Türkiye",
+      name: "United Kingdom",
     },
     workLocation: {
-      "@type": "Country",
-      name: "Turkey",
-      alternateName: "Türkiye",
+      "@type": "Place",
+      name: "London",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "GB",
+        addressLocality: "London",
+      },
     },
   };
 
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body className="bg-background text-foreground overflow-y-scroll">
         <Script
           id="person-structured-data"

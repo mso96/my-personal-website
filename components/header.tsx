@@ -9,12 +9,13 @@ import { AvailabilityBadge } from "./availability-badge";
 import { AvailabilityDialog } from "./availability-dialog";
 import { appConfig } from "@/lib/config";
 
-const NAV_ITEMS = {
-  about: "/",
-  blog: "/blog",
-  thoughts: "/thoughts",
-  work: "/work",
-} as const;
+const NAV_ITEMS = [
+  { name: "about", href: "/" },
+  { name: "garden", href: "/blog" },
+  { name: "gallery", href: "/gallery" },
+  { name: "tech gear", href: "/tech-gear" },
+  { name: "resources", href: "/thoughts" },
+] as const;
 
 export const Header = memo(function Header() {
   const pathname = usePathname();
@@ -22,7 +23,7 @@ export const Header = memo(function Header() {
 
   const navLinks = useMemo(
     () =>
-      Object.entries(NAV_ITEMS).map(([name, href]) => (
+      NAV_ITEMS.map(({ name, href }) => (
         <Link
           key={name}
           href={href}
@@ -44,14 +45,23 @@ export const Header = memo(function Header() {
           className="flex flex-col fade items-center md:items-start justify-start py-12 tracking-tight w-full"
           aria-label="Main navigation"
         >
-          <div className="flex flex-col items-start gap-3">
-            <div className="flex flex-col items-start">
-              <span className="text-base font-medium">Onurhan Demir</span>
-              <span className="text-sm opacity-50">software developer</span>
+          <div className="flex items-center gap-3">
+            <img
+              src="/profile/sefa-oruc.png"
+              alt="Sefa Oruc"
+              className="size-[74px] rounded-lg border border-foreground/10 bg-foreground/[0.04] object-cover shadow-sm"
+            />
+            <div className="flex flex-col items-start gap-3">
+              <div className="flex flex-col items-start">
+                <span className="text-base font-medium">Sefa Oruc</span>
+                <span className="text-sm opacity-50">
+                  London-based Marketing Engineer
+                </span>
+              </div>
+              {appConfig.availability.enabled && (
+                <AvailabilityBadge onClick={() => setIsDialogOpen(true)} />
+              )}
             </div>
-            {appConfig.availability.enabled && (
-              <AvailabilityBadge onClick={() => setIsDialogOpen(true)} />
-            )}
           </div>
           {appConfig.availability.enabled && (
             <AvailabilityDialog
