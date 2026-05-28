@@ -2,6 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "my-website",
   "compatibility_date": "2026-04-19",
+  "build": {
+    "command": "corepack enable && pnpm install --frozen-lockfile && pnpm build"
+  },
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
