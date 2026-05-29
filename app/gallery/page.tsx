@@ -9,6 +9,36 @@ export const metadata: Metadata = {
 
 const photos = [
   {
+    src: "/gallery/porto-portugal-2026-1.png",
+    caption: "Porto, Portugal, 2026",
+    rotate: "-1.3deg",
+  },
+  {
+    src: "/gallery/porto-portugal-2026.png",
+    caption: "Porto, Portugal, 2026",
+    rotate: "1deg",
+  },
+  {
+    src: "/gallery/sigiriya-sri-lanka-2025.png",
+    caption: "Sigiriya, Sri Lanka, 2025",
+    rotate: "-0.7deg",
+  },
+  {
+    src: "/gallery/new-york-usa-2025.png",
+    caption: "New York, USA, 2025",
+    rotate: "1.4deg",
+  },
+  {
+    src: "/gallery/marrakech-morocco-2025.png",
+    caption: "Marrakech, Morocco, 2025",
+    rotate: "-1deg",
+  },
+  {
+    src: "/gallery/machu-picchu-peru-2026.png",
+    caption: "Machu Picchu, Peru, 2026",
+    rotate: "0.8deg",
+  },
+  {
     src: "/gallery/ankara-turkey-2025.jpeg",
     caption: "Ankara, Turkey, 2025",
     rotate: "-1.6deg",

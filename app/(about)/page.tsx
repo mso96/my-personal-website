@@ -129,9 +129,9 @@ export default function About() {
           .
         </>,
         <>
-          I move fast, test ideas, and iterate constantly. I enjoy turning messy
-          ideas into real products, communities, and experiences people
-          genuinely care about.
+          I like moving from spark to shipped quickly: testing ideas, learning
+          in public, and shaping messy thoughts into real products, communities,
+          and experiences people genuinely care about.
         </>,
         <>
           Outside of work, I&apos;m usually experimenting with AI tools, vibe
