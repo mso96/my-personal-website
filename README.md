@@ -1,72 +1,68 @@
-<div align="center">
-  <img src="public/logo.svg" alt="Logo" width="56" height="48">
-</div>
+# sefaoruc.com
 
-# onurhan.dev
+Personal website for **Sefa Oruc**, a London-based Marketing Engineer and founder of [Wubbie Studio](https://wubbiestudio.com/).
 
-- **Icons**: [Lucide React](https://lucide.dev/icons/)
+The site includes an about page, digital garden, gallery, tech gear page, and a curated list of favorite websites and resources.
+
+## Stack
+
 - **Framework**: [Next.js](https://nextjs.org/)
-- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
-- **Syntax Highlight**: [Sugar High](https://github.com/huozhi/sugar-high)
-- **Blog**: [Next MDX Remote](https://github.com/hashicorp/next-mdx-remote)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Content**: MDX with [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
+- **Icons**: [Lucide React](https://lucide.dev/icons/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Deployment**: Cloudflare static deployment with Wrangler
 
-## Overview
+## Pages
 
-- `app/blog/*` - Static pre-rendered blog pages using Contentlayer.
-- `app/*` - All other pages.
-- `components/` - All components.
-- `public/*` - Static assets including images for blogs and other all images.
-- `content/` - Contains all posts and snippets.
-- `thoughts/` - Contains all thoughts.
-- `lib/`- Contains metadata and util functions.
-- `stores/`- Store files for zustand.
-- `types/`- Contains all types and interfaces.
-- `styles/*` - Contains all global styles.
-
-## Demo
-
-```bash
-https://onurhan.dev
-```
+- `/` - About Sefa, Wubbie Studio, Londonmaxxing, socials, and contact
+- `/blog` - Digital garden / thoughts
+- `/gallery` - Personal photo gallery
+- `/tech-gear` - Tech gear list with hover previews
+- `/thoughts` - Favorite websites and resources
 
 ## Running Locally
 
-This application requires Node.js v16.13+.
+This project uses pnpm.
 
 ```bash
-git clone https://github.com/onurhan1337/my-website.git
-cd my-website
 pnpm install
 pnpm dev
 ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/onurhan1337/my-website/blob/master/.env.example). You don't need to fill them out for the site to work.
-
-## Cloning / Forking
-
-Please review the [license](https://github.com/onurhan1337/my-website/blob/master/LICENSE.txt) and remove all of my personal information (resume, blog posts, images, etc.).
-
-## Getting Started
-
-First, run the development server:
+Open:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If port `3000` is busy, Next.js may choose another local port.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+pnpm build
+```
 
-## Deployment
+The app is configured as a static export in `next.config.mjs`, so the production build outputs static files to:
 
-Deployed on [Cloudflare Pages](https://pages.cloudflare.com/) as a pure static export (`output: "export"`). All HTML is generated at build time, so MDX content is read from the filesystem during the build and served as plain static files from the CDN.
+```bash
+out/
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Cloudflare Deploy
+
+The Cloudflare deploy command is:
+
+```bash
+npx wrangler deploy
+```
+
+`wrangler.jsonc` runs the build first and then deploys the generated `out/` directory.
+
+## Repository
+
+```bash
+https://github.com/mso96/my-personal-website
+```
+
