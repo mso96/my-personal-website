@@ -77,6 +77,36 @@ const websites = [
       "Typography inspiration and font pairing references for making websites feel more intentional.",
     href: "https://www.typewolf.com/",
   },
+  {
+    title: "Metropol",
+    description:
+      "A sharp digital world with a strange, cinematic internet feeling and plenty of visual atmosphere.",
+    href: "https://www.metropol.world/",
+  },
+  {
+    title: "Asciinator",
+    description:
+      "A tiny, fun tool for turning images into ASCII-style visuals. Weird in the best internet way.",
+    href: "https://asciinator.app/",
+  },
+  {
+    title: "LogoSystem",
+    description:
+      "A useful archive for studying logo systems, identity structure, and how brands stay flexible.",
+    href: "https://logosystem.co/",
+  },
+  {
+    title: "Basement Lab",
+    description:
+      "Experimental studio work, interaction ideas, and polished digital craft from Basement.",
+    href: "https://basement.studio/lab/",
+  },
+  {
+    title: "Unicorn Studio",
+    description:
+      "A no-code 3D and interactive design tool with a very modern, playful web-native feel.",
+    href: "https://www.unicorn.studio/",
+  },
 ] as const;
 
 function previewUrl(url: string) {
