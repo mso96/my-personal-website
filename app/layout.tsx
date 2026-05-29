@@ -57,12 +57,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
+    icon: "/profile/sefa-oruc.png",
+    shortcut: "/profile/sefa-oruc.png",
+    apple: "/profile/sefa-oruc.png",
     other: {
       rel: "icon",
-      url: "/logo.svg",
+      url: "/profile/sefa-oruc.png",
     },
   },
   twitter: {
