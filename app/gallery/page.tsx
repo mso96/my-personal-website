@@ -142,11 +142,11 @@ export default function GalleryPage() {
         </p>
       </div>
 
-      <div className="columns-1 sm:columns-2 gap-5 [column-fill:_balance]">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         {photos.map((photo) => (
           <figure
             key={photo.src}
-            className="group mb-5 break-inside-avoid rounded-[6px] bg-[#fbfaf7] p-2.5 pb-4 shadow-[0_10px_32px_rgba(0,0,0,0.08)] ring-1 ring-black/[0.04] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_44px_rgba(0,0,0,0.12)]"
+            className="group rounded-[6px] bg-[#fbfaf7] p-2.5 pb-4 shadow-[0_10px_32px_rgba(0,0,0,0.08)] ring-1 ring-black/[0.04] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_44px_rgba(0,0,0,0.12)]"
             style={{ rotate: photo.rotate }}
           >
             <div className="overflow-hidden rounded-[3px] bg-foreground/[0.04]">
