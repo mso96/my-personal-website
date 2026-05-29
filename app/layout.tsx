@@ -66,12 +66,17 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/profile/sefa-oruc.png",
-    shortcut: "/profile/sefa-oruc.png",
-    apple: "/profile/sefa-oruc.png",
+    icon: [
+      {
+        url: "/favicon.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/apple-icon.png",
     other: {
       rel: "icon",
-      url: "/profile/sefa-oruc.png",
+      url: "/favicon.png",
     },
   },
   twitter: {
