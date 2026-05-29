@@ -4,10 +4,11 @@ import "./globals.css";
 
 import { Header } from "@/components/header";
 
+const siteUrl = "https://sefaoruc.com";
+const shareImage = "/social/sefa-oruc.svg";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL || "https://onurhan.dev"
-  ),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Sefa Oruc - London-based Marketing Engineer",
     template: "%s | Sefa Oruc",
@@ -32,15 +33,23 @@ export const metadata: Metadata = {
     "AI Tools",
     "Internet Culture",
   ],
-  authors: [{ name: "Sefa Oruc", url: "https://onurhan.dev" }],
+  authors: [{ name: "Sefa Oruc", url: siteUrl }],
   creator: "Sefa Oruc",
   publisher: "Sefa Oruc",
   openGraph: {
     title: "Sefa Oruc - London-based Marketing Engineer",
     description:
       "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
-    url: "https://onurhan.dev",
+    url: siteUrl,
     siteName: "Sefa Oruc - Marketing Engineer",
+    images: [
+      {
+        url: shareImage,
+        width: 1200,
+        height: 630,
+        alt: "Sefa Oruc",
+      },
+    ],
     locale: "en_US",
     alternateLocale: ["tr_TR"],
     type: "website",
@@ -72,19 +81,20 @@ export const metadata: Metadata = {
     creator: "@msefaoruc",
     description:
       "London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
+    images: [shareImage],
   },
   verification: {
     google: "K1pkJ72cY3DylswXke2MHJGxmjJ91WXwgozcCICvFrU",
   },
   alternates: {
-    canonical: "https://onurhan.dev",
+    canonical: siteUrl,
     languages: {
-      "en-US": "https://onurhan.dev",
-      "tr-TR": "https://onurhan.dev",
-      "x-default": "https://onurhan.dev",
+      "en-US": siteUrl,
+      "tr-TR": siteUrl,
+      "x-default": siteUrl,
     },
     types: {
-      "application/rss+xml": "https://onurhan.dev/feed.xml",
+      "application/rss+xml": `${siteUrl}/feed.xml`,
     },
   },
 };
@@ -100,7 +110,7 @@ export default function RootLayout({
     name: "Sefa Oruc",
     alternateName: "Sefa",
     jobTitle: "Marketing Engineer & Founder",
-    url: "https://onurhan.dev",
+    url: siteUrl,
     description:
       "London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
     knowsAbout: [

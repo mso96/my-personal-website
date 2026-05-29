@@ -163,7 +163,7 @@ export function WorkClient() {
             className="w-full sm:w-auto justify-center sm:justify-start gap-2 h-[52px] px-5 bg-[#f5f5f5] text-[#262626] tracking-[-0.1px] border border-neutral-200 hover:opacity-90 hover:bg-[#ebebeb]"
           >
             <Link
-              href="mailto:onurhandtr@gmail.com"
+              href="mailto:sefa@wubbiestudio.com"
               className="flex items-center gap-2"
             >
               <Mail size={18} />

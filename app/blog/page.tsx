@@ -20,12 +20,27 @@ export const metadata: Metadata = {
     title: "Digital Garden / Thoughts | Sefa Oruc",
     description:
       "A casual digital garden of notes from Sefa Oruc on digital nomad life, random observations, startup lessons, Turkish recipes, and internet projects.",
-    url: "https://onurhan.dev/blog",
+    url: "https://sefaoruc.com/blog",
+    images: [
+      {
+        url: "/social/sefa-oruc.svg",
+        width: 1200,
+        height: 630,
+        alt: "Sefa Oruc",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Garden / Thoughts | Sefa Oruc",
+    description:
+      "A casual digital garden of notes from Sefa Oruc on digital nomad life, random observations, startup lessons, Turkish recipes, and internet projects.",
+    images: ["/social/sefa-oruc.svg"],
   },
   alternates: {
-    canonical: "https://onurhan.dev/blog",
+    canonical: "https://sefaoruc.com/blog",
     types: {
-      "application/rss+xml": "https://onurhan.dev/feed.xml",
+      "application/rss+xml": "https://sefaoruc.com/feed.xml",
     },
   },
 };
@@ -34,7 +49,7 @@ export const dynamic = "force-static";
 
 export default async function Blog() {
   const posts = await getAllBlogPostsList();
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://onurhan.dev";
+  const baseUrl = "https://sefaoruc.com";
 
   const blogCollectionJsonLd = {
     "@context": "https://schema.org",

@@ -16,7 +16,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://onurhan.dev/sitemap.xml",
-    host: "https://onurhan.dev",
+    sitemap: "https://sefaoruc.com/sitemap.xml",
+    host: "https://sefaoruc.com",
   };
 }

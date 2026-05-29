@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const envSchema = z.object({
-  NEXT_PUBLIC_APP_URL: z.url().default("https://onurhan.dev"),
+  NEXT_PUBLIC_APP_URL: z.url().default("https://sefaoruc.com"),
 });
 
 type Env = z.infer<typeof envSchema>;
@@ -28,7 +28,7 @@ function getEnv(): Env {
       );
     }
     cachedEnv = {
-      NEXT_PUBLIC_APP_URL: "https://onurhan.dev",
+      NEXT_PUBLIC_APP_URL: "https://sefaoruc.com",
     };
     return cachedEnv;
   }

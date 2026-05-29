@@ -18,7 +18,7 @@ export function DocsExplorer({
   apiExplorer,
 }: DocsExplorerProps) {
   const getDocUrl = (path: string) => {
-    return `https://github.com/onurhan1337/kevi/blob/master/${path}`;
+    return `https://github.com/mso96/my-personal-website/blob/master/${path}`;
   };
 
   return (

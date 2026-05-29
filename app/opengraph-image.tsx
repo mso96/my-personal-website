@@ -37,7 +37,7 @@ export default function OGImage() {
               fontWeight: 500,
             }}
           >
-            onurhan.dev
+            sefaoruc.com
           </span>
         </div>
         <div

@@ -39,7 +39,8 @@ export async function generateMetadata({
     keywords,
   } = blog.metadata;
 
-  const blogUrl = `https://onurhan.dev/blog/${blog.slug}`;
+  const blogUrl = `https://sefaoruc.com/blog/${blog.slug}`;
+  const shareImage = blog.metadata.image || "/social/sefa-oruc.svg";
 
   return {
     title,
@@ -51,9 +52,17 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       ...(modifiedTime && { modifiedTime }),
-      authors: ["Onurhan Demir"],
+      authors: ["Sefa Oruc"],
       url: blogUrl,
-      siteName: "Onurhan Demir",
+      siteName: "Sefa Oruc",
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
       locale: "en_US",
       alternateLocale: ["tr_TR"],
     },
@@ -61,8 +70,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      site: "@onurhan1337",
-      creator: "@onurhan1337",
+      site: "@msefaoruc",
+      creator: "@msefaoruc",
+      images: [shareImage],
     },
     alternates: {
       canonical: blogUrl,
@@ -84,7 +94,7 @@ export default async function BlogDetailPage({ params }: Props) {
 
   const headings = extractHeadings(blog.content);
   const modifiedAt = blog.metadata.modifiedAt;
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://onurhan.dev";
+  const baseUrl = "https://sefaoruc.com";
   const blogUrl = `${baseUrl}/blog/${blog.slug}`;
 
   const blogPostJsonLd = {
@@ -96,7 +106,7 @@ export default async function BlogDetailPage({ params }: Props) {
     description: blog.metadata.summary,
     image: blog.metadata.image
       ? `${baseUrl}${blog.metadata.image}`
-      : `${baseUrl}/blog/${blog.slug}/opengraph-image`,
+      : `${baseUrl}/social/sefa-oruc.svg`,
     url: blogUrl,
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -104,17 +114,17 @@ export default async function BlogDetailPage({ params }: Props) {
     },
     author: {
       "@type": "Person",
-      name: "Onurhan Demir",
+      name: "Sefa Oruc",
       url: baseUrl,
       sameAs: [
-        "https://github.com/onurhan1337",
-        "https://youtube.com/@onurhandev",
-        "https://x.com/onurhan1337",
+        "https://github.com/mso96",
+        "https://x.com/msefaoruc",
+        "https://www.linkedin.com/in/mso96",
       ],
     },
     publisher: {
       "@type": "Person",
-      name: "Onurhan Demir",
+      name: "Sefa Oruc",
       url: baseUrl,
     },
     inLanguage: "en-US",

@@ -9,10 +9,25 @@ export const metadata: Metadata = {
     title: "My Fav Website and Resources | Sefa Oruc",
     description:
       "A curated list of websites and design resources Sefa likes, with visual previews and links.",
-    url: "https://onurhan.dev/thoughts",
+    url: "https://sefaoruc.com/thoughts",
+    images: [
+      {
+        url: "/social/sefa-oruc.svg",
+        width: 1200,
+        height: 630,
+        alt: "Sefa Oruc",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "My Fav Website and Resources | Sefa Oruc",
+    description:
+      "A curated list of websites and design resources Sefa likes, with visual previews and links.",
+    images: ["/social/sefa-oruc.svg"],
   },
   alternates: {
-    canonical: "https://onurhan.dev/thoughts",
+    canonical: "https://sefaoruc.com/thoughts",
   },
 };
 

@@ -5,23 +5,38 @@ import { WorkClient } from "./work-client";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Onurhan Demir's professional experience and work history. Founder of Kizzle Studio, former Software Developer at Insider, Frontend Engineer at Utilify. Building e-commerce solutions and web applications.",
+    "Sefa Oruc's professional experience and work history. Founder of Kizzle Studio, former Software Developer at Insider, Frontend Engineer at Utilify. Building e-commerce solutions and web applications.",
   keywords: [
-    "Onurhan Demir Work",
-    "Onurhan Demir Experience",
-    "Onurhan Demir Career",
+    "Sefa Oruc Work",
+    "Sefa Oruc Experience",
+    "Sefa Oruc Career",
     "Kizzle Studio",
     "Software Developer Turkey",
     "Full Stack Developer Experience",
   ],
   openGraph: {
-    title: "Work | Onurhan Demir",
+    title: "Work | Sefa Oruc",
     description:
-      "Onurhan Demir's professional experience and work history. Founder of Kizzle Studio, specializing in e-commerce and full-stack development.",
-    url: "https://onurhan.dev/work",
+      "Sefa Oruc's professional experience and work history. Founder of Kizzle Studio, specializing in e-commerce and full-stack development.",
+    url: "https://sefaoruc.com/work",
+    images: [
+      {
+        url: "/social/sefa-oruc.svg",
+        width: 1200,
+        height: 630,
+        alt: "Sefa Oruc",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work | Sefa Oruc",
+    description:
+      "Sefa Oruc's professional experience and work history.",
+    images: ["/social/sefa-oruc.svg"],
   },
   alternates: {
-    canonical: "https://onurhan.dev/work",
+    canonical: "https://sefaoruc.com/work",
   },
 };
 

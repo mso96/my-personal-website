@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export const KIZZLE_URL = "https://kizzle.studio?utm_source=onurhan.dev&utm_medium=website&utm_campaign=portfolio&src=personal";
+export const KIZZLE_URL = "https://kizzle.studio?utm_source=sefaoruc.com&utm_medium=website&utm_campaign=portfolio&src=personal";
 
 interface KizzleCTAButtonProps {
   text?: string;

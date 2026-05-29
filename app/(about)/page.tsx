@@ -25,10 +25,25 @@ export const metadata: Metadata = {
     title: "About | Sefa Oruc",
     description:
       "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
-    url: "https://onurhan.dev",
+    url: "https://sefaoruc.com",
+    images: [
+      {
+        url: "/social/sefa-oruc.svg",
+        width: 1200,
+        height: 630,
+        alt: "Sefa Oruc",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Sefa Oruc",
+    description:
+      "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
+    images: ["/social/sefa-oruc.svg"],
   },
   alternates: {
-    canonical: "https://onurhan.dev",
+    canonical: "https://sefaoruc.com",
   },
 };
 
@@ -38,7 +53,7 @@ const structuredData = {
   name: "Sefa Oruc",
   alternateName: "Sefa",
   jobTitle: "Marketing Engineer & Founder",
-  url: "https://onurhan.dev",
+  url: "https://sefaoruc.com",
   description:
     "London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
   knowsAbout: [

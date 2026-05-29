@@ -8,7 +8,7 @@ function detectLanguage(text: string): "tr" | "en" {
 }
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://onurhan.dev";
+  const baseUrl = "https://sefaoruc.com";
   const posts = await getAllBlogPosts();
 
   const rssItems = posts
@@ -37,7 +37,7 @@ export async function GET() {
         post.metadata.summary
       )}]]></description>
       <pubDate>${pubDate}</pubDate>
-      <dc:creator><![CDATA[Onurhan Demir]]></dc:creator>
+      <dc:creator><![CDATA[Sefa Oruc]]></dc:creator>
       <dc:language>${language}</dc:language>
       ${modifiedDate ? `<dc:date>${modifiedDate}</dc:date>` : ""}
       <content:encoded><![CDATA[${escapeCdata(
@@ -53,18 +53,18 @@ export async function GET() {
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title><![CDATA[Onurhan Demir - Blog]]></title>
+    <title><![CDATA[Sefa Oruc - Blog]]></title>
     <link>${baseUrl}/blog</link>
-    <description><![CDATA[Software development articles, tutorials, and insights on React, Next.js, TypeScript, and modern web technologies.]]></description>
+    <description><![CDATA[Notes, recipes, observations, and internet thoughts from Sefa Oruc.]]></description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />
-    <managingEditor>onurhan@onurhan.dev (Onurhan Demir)</managingEditor>
-    <webMaster>onurhan@onurhan.dev (Onurhan Demir)</webMaster>
-    <copyright>Copyright ${new Date().getFullYear()} Onurhan Demir</copyright>
+    <managingEditor>sefa@wubbiestudio.com (Sefa Oruc)</managingEditor>
+    <webMaster>sefa@wubbiestudio.com (Sefa Oruc)</webMaster>
+    <copyright>Copyright ${new Date().getFullYear()} Sefa Oruc</copyright>
     <image>
-      <url>${baseUrl}/logo.svg</url>
-      <title>Onurhan Demir</title>
+      <url>${baseUrl}/social/sefa-oruc.svg</url>
+      <title>Sefa Oruc</title>
       <link>${baseUrl}</link>
     </image>
     ${rssItems}
