@@ -11,11 +11,11 @@ import { appConfig } from "@/lib/config";
 
 const NAV_ITEMS = [
   { name: "about", href: "/" },
-  { name: "garden", href: "/blog" },
   { name: "gallery", href: "/gallery" },
+  { name: "side projects", href: "/side-projects" },
+  { name: "garden", href: "/blog" },
   { name: "tech gear", href: "/tech-gear" },
   { name: "resources", href: "/resources" },
-  { name: "side projects", href: "/side-projects" },
 ] as const;
 
 export const Header = memo(function Header() {
