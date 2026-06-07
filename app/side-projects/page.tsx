@@ -54,7 +54,7 @@ export default function SideProjectsPage() {
         >
           <div className="aspect-[1.91/1] overflow-hidden border-b border-foreground/10 bg-foreground/[0.035]">
             <img
-              src="/side-projects/company-radar-preview.png"
+              src="/side-projects/company-radar-overview.png"
               alt="Company Radar homepage preview"
               className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.025]"
             />
@@ -67,8 +67,8 @@ export default function SideProjectsPage() {
               Company Radar
             </h2>
             <p className="mt-2 text-sm leading-relaxed opacity-65">
-              A UK company discovery and research tool for turning public
-              company data into a cleaner, faster browsing experience.
+              An open-source tool for tracking newly registered UK companies,
+              market signals, SIC codes, and lightweight email alerts.
             </p>
             <p className="mt-3 text-xs opacity-40">companyradar.uk</p>
           </div>
