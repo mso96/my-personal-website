@@ -55,7 +55,7 @@ export default function ThoughtsPagination({
       params.set("filter", filter);
     }
     const query = params.toString();
-    const path = query ? `/thoughts?${query}` : "/thoughts";
+    const path = query ? `/resources?${query}` : "/resources";
     router.push(path);
   };
 

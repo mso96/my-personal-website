@@ -2,7 +2,7 @@
 
 Personal website for **Sefa Oruc**, a London-based Marketing Engineer and founder of [Wubbie Studio](https://wubbiestudio.com/).
 
-The site includes an about page, digital garden, gallery, tech gear page, and a curated list of favorite websites and resources.
+The site includes an about page, digital garden, gallery, tech gear page, side projects, and a curated list of favorite websites and resources.
 
 ## Stack
 
@@ -19,7 +19,9 @@ The site includes an about page, digital garden, gallery, tech gear page, and a 
 - `/blog` - Digital garden / thoughts
 - `/gallery` - Personal photo gallery
 - `/tech-gear` - Tech gear list with hover previews
-- `/thoughts` - Favorite websites and resources
+- `/resources` - Favorite websites and resources
+- `/side-projects` - Side project index
+- `/side-projects/company-radar` - Company Radar project page
 
 ## Running Locally
 
@@ -65,4 +67,3 @@ npx wrangler deploy
 ```bash
 https://github.com/mso96/my-personal-website
 ```
-

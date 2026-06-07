@@ -14,7 +14,8 @@ const NAV_ITEMS = [
   { name: "garden", href: "/blog" },
   { name: "gallery", href: "/gallery" },
   { name: "tech gear", href: "/tech-gear" },
-  { name: "resources", href: "/thoughts" },
+  { name: "resources", href: "/resources" },
+  { name: "side projects", href: "/side-projects" },
 ] as const;
 
 export const Header = memo(function Header() {
