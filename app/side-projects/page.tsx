@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://sefaoruc.com/side-projects",
     images: [
       {
-        url: "/social/sefa-oruc.svg",
+        url: "/social/sefa-oruc-og.png",
         width: 1200,
         height: 630,
         alt: "Sefa Oruc",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Side Projects | Sefa Oruc",
     description:
       "Small internet projects, experiments, and products built by Sefa Oruc.",
-    images: ["/social/sefa-oruc.svg"],
+    images: ["/social/sefa-oruc-og.png"],
   },
   alternates: {
     canonical: "https://sefaoruc.com/side-projects",

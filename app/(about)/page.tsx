@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://sefaoruc.com",
     images: [
       {
-        url: "/social/sefa-oruc.svg",
+        url: "/social/sefa-oruc-og.png",
         width: 1200,
         height: 630,
         alt: "Sefa Oruc",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "About | Sefa Oruc",
     description:
       "Sefa Oruc is a London-based Marketing Engineer and founder of Wubbie Studio, working with startups on marketing, growth, and digital experiences.",
-    images: ["/social/sefa-oruc.svg"],
+    images: ["/social/sefa-oruc-og.png"],
   },
   alternates: {
     canonical: "https://sefaoruc.com",

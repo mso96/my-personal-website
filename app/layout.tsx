@@ -5,7 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 
 const siteUrl = "https://sefaoruc.com";
-const shareImage = "/social/sefa-oruc.svg";
+const shareImage = "/social/sefa-oruc-og.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

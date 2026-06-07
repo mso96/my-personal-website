@@ -63,7 +63,7 @@ export async function GET() {
     <webMaster>sefa@wubbiestudio.com (Sefa Oruc)</webMaster>
     <copyright>Copyright ${new Date().getFullYear()} Sefa Oruc</copyright>
     <image>
-      <url>${baseUrl}/social/sefa-oruc.svg</url>
+      <url>${baseUrl}/social/sefa-oruc-og.png</url>
       <title>Sefa Oruc</title>
       <link>${baseUrl}</link>
     </image>

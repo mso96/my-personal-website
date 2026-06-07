@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://sefaoruc.com/blog",
     images: [
       {
-        url: "/social/sefa-oruc.svg",
+        url: "/social/sefa-oruc-og.png",
         width: 1200,
         height: 630,
         alt: "Sefa Oruc",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Digital Garden / Thoughts | Sefa Oruc",
     description:
       "A casual digital garden of notes from Sefa Oruc on digital nomad life, random observations, startup lessons, Turkish recipes, and internet projects.",
-    images: ["/social/sefa-oruc.svg"],
+    images: ["/social/sefa-oruc-og.png"],
   },
   alternates: {
     canonical: "https://sefaoruc.com/blog",

@@ -40,7 +40,7 @@ export async function generateMetadata({
   } = blog.metadata;
 
   const blogUrl = `https://sefaoruc.com/blog/${blog.slug}`;
-  const shareImage = blog.metadata.image || "/social/sefa-oruc.svg";
+  const shareImage = blog.metadata.image || "/social/sefa-oruc-og.png";
 
   return {
     title,
@@ -106,7 +106,7 @@ export default async function BlogDetailPage({ params }: Props) {
     description: blog.metadata.summary,
     image: blog.metadata.image
       ? `${baseUrl}${blog.metadata.image}`
-      : `${baseUrl}/social/sefa-oruc.svg`,
+      : `${baseUrl}/social/sefa-oruc-og.png`,
     url: blogUrl,
     mainEntityOfPage: {
       "@type": "WebPage",
