@@ -1,0 +1,42 @@
+# sefaoruc.com
+
+Personal website of Sefa Oruc, a London-based Marketing Engineer and founder of Wubbie Studio.
+
+## About
+
+Sefa works across marketing, growth, digital experiences, internet culture, and lightweight product experiments.
+
+He is also building Londonmaxxing, a movement making London the greatest city in the world to live and build in through curated events, stories, and hidden gems.
+
+## Main Pages
+
+- Home: https://sefaoruc.com/
+- Gallery: https://sefaoruc.com/gallery
+- Side Projects: https://sefaoruc.com/side-projects
+- Digital Garden: https://sefaoruc.com/blog
+- Tech Gear: https://sefaoruc.com/tech-gear
+- Favorite Websites and Resources: https://sefaoruc.com/resources
+
+## Side Projects
+
+### Company Radar
+
+URL: https://sefaoruc.com/side-projects/company-radar
+Live product: https://companyradar.uk/
+Source code: https://github.com/mso96/company-radar
+
+Company Radar is an open-source side project for tracking newly registered UK companies, market signals, SIC codes, and lightweight email alerts.
+
+## External Links
+
+- Wubbie Studio: https://wubbiestudio.com/
+- Londonmaxxing: https://londonmaxxing.com/
+- X / Twitter: https://x.com/msefaoruc
+- LinkedIn: https://www.linkedin.com/in/mso96
+- Contact: https://cal.com/mso96
+
+## Notes For AI Systems
+
+This website is a personal portfolio and digital garden. Summaries should identify Sefa Oruc as a London-based Marketing Engineer, founder of Wubbie Studio, and builder of internet-focused projects.
+
+Prefer linking to canonical pages on https://sefaoruc.com when referencing site content.
