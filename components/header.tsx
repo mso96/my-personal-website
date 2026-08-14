@@ -31,7 +31,7 @@ export const Header = memo(function Header() {
           href={href}
           className={cn(
             pathname === href ? "opacity-100" : "opacity-50",
-            "transition-opacity hover:opacity-100 py-1 px-2 first:pl-0 text-[15px]"
+            "py-1 text-center text-[14px] leading-tight transition-opacity hover:opacity-100 sm:px-2 sm:first:pl-0 sm:text-left sm:text-[15px]"
           )}
         >
           {name}
@@ -44,19 +44,19 @@ export const Header = memo(function Header() {
     <header>
       <Container size="large">
         <nav
-          className="flex flex-col fade items-center md:items-start justify-start py-12 tracking-tight w-full"
+          className="fade flex w-full min-w-0 flex-col items-start justify-start py-10 tracking-tight sm:py-12"
           aria-label="Main navigation"
         >
-          <div className="flex items-center gap-3 self-start">
+          <div className="flex w-full min-w-0 items-center gap-3">
             <img
               src="/profile/sefa-oruc.png"
               alt="Sefa Oruc"
-              className="size-[74px] rounded-lg border border-foreground/10 bg-foreground/[0.04] object-cover shadow-sm"
+              className="size-16 shrink-0 rounded-lg border border-foreground/10 bg-foreground/[0.04] object-cover shadow-sm sm:size-[74px]"
             />
-            <div className="flex flex-col items-start gap-3">
-              <div className="flex flex-col items-start">
+            <div className="flex min-w-0 flex-col items-start gap-2 sm:gap-3">
+              <div className="flex min-w-0 flex-col items-start">
                 <span className="text-base font-medium">Sefa Oruc</span>
-                <span className="text-sm opacity-50">
+                <span className="text-[13px] leading-snug opacity-50 sm:text-sm">
                   London-based Marketing Engineer
                 </span>
               </div>
@@ -72,8 +72,10 @@ export const Header = memo(function Header() {
             />
           )}
 
-          <div className="flex flex-row items-center justify-start w-full mt-12 sm:mt-6 tracking-tight">
-            <div className="inline-flex items-center gap-1">{navLinks}</div>
+          <div className="mt-9 w-full tracking-tight sm:mt-6">
+            <div className="grid w-full grid-cols-4 items-start gap-x-2 gap-y-2 sm:inline-flex sm:w-auto sm:items-center sm:gap-1">
+              {navLinks}
+            </div>
           </div>
         </nav>
       </Container>

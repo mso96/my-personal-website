@@ -160,7 +160,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-background text-foreground overflow-y-scroll">
+      <body className="overflow-x-hidden overflow-y-scroll bg-background text-foreground">
         <Script
           id="person-structured-data"
           type="application/ld+json"
