@@ -6,11 +6,11 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Company Radar",
   description:
-    "Company Radar is an open-source side project for tracking newly registered UK companies, market signals, SIC codes, and alerts.",
+    "Company Radar tracks newly registered UK companies and helps agencies turn fresh company data into targeted letter campaigns.",
   openGraph: {
     title: "Company Radar | Sefa Oruc",
     description:
-      "An open-source side project for tracking newly registered UK companies, market signals, SIC codes, and alerts.",
+      "Track newly registered UK companies and turn fresh company data into targeted letter campaigns with Agency Mode.",
     url: "https://sefaoruc.com/side-projects/company-radar",
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Company Radar | Sefa Oruc",
     description:
-      "An open-source side project for tracking newly registered UK companies, market signals, SIC codes, and alerts.",
+      "Track newly registered UK companies and turn fresh company data into targeted letter campaigns with Agency Mode.",
     images: ["/side-projects/company-radar-overview.png"],
   },
   alternates: {
@@ -53,8 +53,8 @@ export default function CompanyRadarPage() {
           <p className="mt-4 max-w-2xl text-[15px] leading-relaxed opacity-70">
             I built Company Radar to make newly registered UK company data feel
             easier to explore. It tracks Companies House data, highlights fresh
-            market signals, and gives people a faster way to spot what is being
-            created in the UK right now.
+            market signals, and now gives agencies a way to turn those signals
+            into real letter campaigns.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <a
@@ -73,6 +73,14 @@ export default function CompanyRadarPage() {
             >
               GitHub
             </a>
+            <a
+              href="https://companyradar.uk/agency"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-md bg-foreground px-3 py-2 text-sm text-background transition hover:opacity-80"
+            >
+              Try Agency Mode
+            </a>
           </div>
         </div>
 
@@ -87,6 +95,57 @@ export default function CompanyRadarPage() {
               something you can actually scan: formation volume, top cities, SIC
               codes, hot sectors, business activities, and regional patterns.
             </p>
+          </section>
+
+          <section>
+            <p className="mb-3 text-xs uppercase tracking-[0.16em] opacity-35">
+              New
+            </p>
+            <h2 className="text-[15px] font-medium tracking-tight">
+              Agency Mode
+            </h2>
+            <div className="mt-3 space-y-3 text-[15px] leading-relaxed opacity-70">
+              <p>
+                I built Agency Mode to take Company Radar beyond discovery.
+                Agencies can now find newly registered companies, choose the
+                right audience by sector and location, and create a campaign
+                around the services they offer.
+              </p>
+              <p>
+                The campaign flow lets people select an audience, prepare and
+                personalise a letter, review the final version, and send real
+                letters to relevant companies. It connects fresh company data
+                with a more personal kind of outreach.
+              </p>
+            </div>
+
+            <div className="mt-5 space-y-4">
+              <figure className="overflow-hidden rounded-lg border border-foreground/10 bg-foreground/[0.035]">
+                <img
+                  src="/side-projects/company-radar-agency-audience.jpg"
+                  alt="Company Radar Agency Mode audience and location selection"
+                  className="block w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </figure>
+              <figure className="overflow-hidden rounded-lg border border-foreground/10 bg-foreground/[0.035]">
+                <img
+                  src="/side-projects/company-radar-agency-letter.jpg"
+                  alt="Company Radar Agency Mode letter selection and preview"
+                  className="block w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <a
+              href="https://companyradar.uk/agency"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex rounded-md bg-foreground px-3.5 py-2 text-sm font-medium text-background transition hover:opacity-80"
+            >
+              Open Agency Mode
+            </a>
           </section>
 
           <section>

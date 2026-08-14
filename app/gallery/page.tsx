@@ -9,6 +9,21 @@ export const metadata: Metadata = {
 
 const photos = [
   {
+    src: "/gallery/denizli-turkey-2026.jpeg",
+    caption: "Denizli, Turkey, 2026",
+    rotate: "-0.8deg",
+  },
+  {
+    src: "/gallery/berlin-germany-2026.jpeg",
+    caption: "Berlin, Germany, 2026",
+    rotate: "1.1deg",
+  },
+  {
+    src: "/gallery/majorca-spain-2026.jpeg",
+    caption: "Majorca, Spain, 2026",
+    rotate: "-1deg",
+  },
+  {
     src: "/gallery/porto-portugal-2026-1.png",
     caption: "Porto, Portugal, 2026",
     rotate: "-1.3deg",
@@ -131,6 +146,13 @@ const photos = [
   },
 ] as const;
 
+const photosByYear = [...photos].sort((a, b) => {
+  const yearA = Number(a.caption.match(/\d{4}$/)?.[0] ?? 0);
+  const yearB = Number(b.caption.match(/\d{4}$/)?.[0] ?? 0);
+
+  return yearB - yearA;
+});
+
 export default function GalleryPage() {
   return (
     <Container size="large" className="animate-enter">
@@ -143,18 +165,18 @@ export default function GalleryPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        {photos.map((photo) => (
+        {photosByYear.map((photo) => (
           <figure
             key={photo.src}
             className="group rounded-[6px] bg-[#fbfaf7] p-2.5 pb-4 shadow-[0_10px_32px_rgba(0,0,0,0.08)] ring-1 ring-black/[0.04] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_44px_rgba(0,0,0,0.12)]"
             style={{ rotate: photo.rotate }}
           >
-            <div className="overflow-hidden rounded-[3px] bg-foreground/[0.04]">
+            <div className="aspect-square overflow-hidden rounded-[3px] bg-foreground/[0.04]">
               <img
                 src={photo.src}
                 alt={photo.caption}
                 loading="lazy"
-                className="block w-full object-cover transition duration-500 ease-out group-hover:scale-[1.025]"
+                className="block h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.025]"
               />
             </div>
             <figcaption className="px-1 pt-3 text-[13px] leading-snug text-[#2b2b2b]/80">

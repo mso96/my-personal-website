@@ -12,6 +12,7 @@ import { appConfig } from "@/lib/config";
 const NAV_ITEMS = [
   { name: "about", href: "/" },
   { name: "gallery", href: "/gallery" },
+  { name: "events", href: "/events" },
   { name: "side projects", href: "/side-projects" },
   { name: "garden", href: "/blog" },
   { name: "tech gear", href: "/tech-gear" },
@@ -46,7 +47,7 @@ export const Header = memo(function Header() {
           className="flex flex-col fade items-center md:items-start justify-start py-12 tracking-tight w-full"
           aria-label="Main navigation"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 self-start">
             <img
               src="/profile/sefa-oruc.png"
               alt="Sefa Oruc"
