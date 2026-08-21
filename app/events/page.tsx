@@ -7,11 +7,11 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Upcoming and past coworking sessions hosted by Sefa Oruc in London.",
+    "Upcoming and past events hosted, organised, and supported by Sefa Oruc in London.",
   openGraph: {
     title: "Events | Sefa Oruc",
     description:
-      "Upcoming and past coworking sessions hosted by Sefa Oruc in London.",
+      "Upcoming and past events hosted, organised, and supported by Sefa Oruc in London.",
     url: "https://sefaoruc.com/events",
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Events | Sefa Oruc",
     description:
-      "Upcoming and past coworking sessions hosted by Sefa Oruc in London.",
+      "Upcoming and past events hosted, organised, and supported by Sefa Oruc in London.",
     images: ["/events/coworking-session-vol-3-pixel.png"],
   },
   alternates: {
@@ -41,6 +41,13 @@ const events = [
     image: "/events/coworking-session-vol-3-pixel.png",
     status: "upcoming",
     href: "https://luma.com/x31edicf",
+  },
+  {
+    title: "Touch Grass 🌳",
+    date: "29 August 2026",
+    image: "/events/touch-grass-pixel.png",
+    status: "upcoming",
+    href: "https://luma.com/583em4zg",
   },
   {
     title: "Coworking Session Vol. 2",
@@ -79,7 +86,7 @@ const events = [
   },
 ] as const;
 
-const upcomingEvent = events.find((event) => event.status === "upcoming");
+const upcomingEvents = events.filter((event) => event.status === "upcoming");
 const pastEvents = events.filter((event) => event.status === "past");
 
 export default function EventsPage() {
@@ -92,7 +99,7 @@ export default function EventsPage() {
         </p>
       </div>
 
-      {upcomingEvent && (
+      {upcomingEvents.length > 0 && (
         <section className="mb-12" aria-labelledby="upcoming-events">
           <h2
             id="upcoming-events"
@@ -100,39 +107,46 @@ export default function EventsPage() {
           >
             Upcoming
           </h2>
-          <article className="overflow-hidden rounded-lg border border-foreground/10 bg-background sm:grid sm:grid-cols-2">
-            <div className="aspect-[40/21] overflow-hidden border-b border-foreground/10 bg-foreground/[0.035] sm:aspect-auto sm:h-full sm:border-b-0 sm:border-r">
-              <img
-                src={upcomingEvent.image}
-                alt={`${upcomingEvent.title} attendees`}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="flex flex-col items-start justify-between p-5 sm:p-6">
-              <div>
-                <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 px-2.5 py-1 text-xs opacity-65">
-                  <span className="relative flex size-1.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground opacity-40" />
-                    <span className="absolute inline-flex h-full w-full animate-pulse rounded-full bg-foreground opacity-30" />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-foreground opacity-70" />
-                  </span>
-                  Upcoming
-                </span>
-                <h3 className="text-base font-medium tracking-tight">
-                  {upcomingEvent.title}
-                </h3>
-                <p className="mt-2 text-sm opacity-55">{upcomingEvent.date}</p>
-              </div>
-              <a
-                href={upcomingEvent.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center rounded-md bg-foreground px-3.5 py-2 text-sm font-medium text-background transition-opacity hover:opacity-80"
+          <div className="space-y-4">
+            {upcomingEvents.map((event) => (
+              <article
+                key={event.title}
+                className="overflow-hidden rounded-lg border border-foreground/10 bg-background sm:grid sm:grid-cols-2"
               >
-                Register on Luma
-              </a>
-            </div>
-          </article>
+                <div className="aspect-[40/21] overflow-hidden border-b border-foreground/10 bg-foreground/[0.035] sm:aspect-auto sm:h-full sm:border-b-0 sm:border-r">
+                  <img
+                    src={event.image}
+                    alt={`${event.title} event artwork`}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col items-start justify-between p-5 sm:p-6">
+                  <div>
+                    <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-foreground/10 px-2.5 py-1 text-xs opacity-65">
+                      <span className="relative flex size-1.5">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground opacity-40" />
+                        <span className="absolute inline-flex h-full w-full animate-pulse rounded-full bg-foreground opacity-30" />
+                        <span className="relative inline-flex size-1.5 rounded-full bg-foreground opacity-70" />
+                      </span>
+                      Upcoming
+                    </span>
+                    <h3 className="text-base font-medium tracking-tight">
+                      {event.title}
+                    </h3>
+                    <p className="mt-2 text-sm opacity-55">{event.date}</p>
+                  </div>
+                  <a
+                    href={event.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex items-center rounded-md bg-foreground px-3.5 py-2 text-sm font-medium text-background transition-opacity hover:opacity-80"
+                  >
+                    Register on Luma
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
       )}
 
