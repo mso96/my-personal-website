@@ -169,6 +169,8 @@ export default function EventsPage() {
                   className={`h-full w-full object-cover ${
                     event.title === "Coworking Session Vol. 3"
                       ? "scale-[1.24] object-[center_48%]"
+                      : event.title === "Coworking Session Vol. 2"
+                        ? "scale-[1.12] object-center"
                       : ""
                   }`}
                 />
