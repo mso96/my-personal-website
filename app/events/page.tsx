@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 const events = [
   {
-    title: "Touch Grass 🌳",
+    title: "Touch Grass Club 001: Hampstead Heath",
     date: "29 August 2026",
     image: "/events/touch-grass-pixel.png",
     status: "upcoming",
