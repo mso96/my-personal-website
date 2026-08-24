@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://sefaoruc.com/events",
     images: [
       {
-        url: "/events/coworking-session-vol-3-pixel.png",
+        url: "/events/coworking-session-vol-3-hero.jpg",
         width: 1536,
         height: 1024,
         alt: "Coworking Session Vol. 3",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Events | Sefa Oruc",
     description:
       "Upcoming and past events hosted, organised, and supported by Sefa Oruc in London.",
-    images: ["/events/coworking-session-vol-3-pixel.png"],
+    images: ["/events/coworking-session-vol-3-hero.jpg"],
   },
   alternates: {
     canonical: "https://sefaoruc.com/events",
@@ -36,18 +36,18 @@ export const metadata: Metadata = {
 
 const events = [
   {
-    title: "Coworking Session Vol. 3",
-    date: "24 August 2026",
-    image: "/events/coworking-session-vol-3-pixel.png",
-    status: "upcoming",
-    href: "https://luma.com/x31edicf",
-  },
-  {
     title: "Touch Grass 🌳",
     date: "29 August 2026",
     image: "/events/touch-grass-pixel.png",
     status: "upcoming",
     href: "https://luma.com/583em4zg",
+  },
+  {
+    title: "Coworking Session Vol. 3",
+    date: "24 August 2026",
+    image: "/events/coworking-session-vol-3-hero.jpg",
+    status: "past",
+    detailHref: "/events/coworking-session-vol-3",
   },
   {
     title: "Coworking Session Vol. 2",
@@ -166,7 +166,11 @@ export default function EventsPage() {
                   src={event.image}
                   alt={`${event.title} attendees`}
                   loading="lazy"
-                  className="h-full w-full object-cover"
+                  className={`h-full w-full object-cover ${
+                    event.title === "Coworking Session Vol. 3"
+                      ? "scale-[1.24] object-[center_48%]"
+                      : ""
+                  }`}
                 />
               </div>
               <div className="p-4">
@@ -190,6 +194,20 @@ export default function EventsPage() {
             );
           })}
         </div>
+      </section>
+
+      <section className="mt-12 border-t border-foreground/10 pt-8">
+        <p className="text-[15px] leading-relaxed opacity-70">
+          Want to host an event together or have an idea?{" "}
+          <a
+            href="https://cal.com/mso96"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-foreground underline decoration-foreground/20 underline-offset-4 transition hover:decoration-foreground/60"
+          >
+            Hit me up.
+          </a>
+        </p>
       </section>
     </Container>
   );
