@@ -74,10 +74,8 @@ export default function SideProjectsPage() {
           </div>
         </Link>
 
-        <a
-          href="https://github.com/mso96/ESP32-Codex-agent-device"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/side-projects/esp32-codex-agent-device"
           className="group overflow-hidden rounded-lg border border-foreground/10 bg-background transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-[0_14px_38px_rgba(0,0,0,0.07)]"
         >
           <div className="aspect-[1.91/1] overflow-hidden border-b border-foreground/10 bg-foreground/[0.035]">
@@ -98,9 +96,9 @@ export default function SideProjectsPage() {
               A pocket-sized device that shows live Codex agent status,
               elapsed time, token usage, and the model while I work.
             </p>
-            <p className="mt-3 text-xs opacity-40">View on GitHub ↗</p>
+            <p className="mt-3 text-xs opacity-40">View project →</p>
           </div>
-        </a>
+        </Link>
       </div>
     </Container>
   );
