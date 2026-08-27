@@ -73,6 +73,34 @@ export default function SideProjectsPage() {
             <p className="mt-3 text-xs opacity-40">companyradar.uk</p>
           </div>
         </Link>
+
+        <a
+          href="https://github.com/mso96/ESP32-Codex-agent-device"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group overflow-hidden rounded-lg border border-foreground/10 bg-background transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-[0_14px_38px_rgba(0,0,0,0.07)]"
+        >
+          <div className="aspect-[1.91/1] overflow-hidden border-b border-foreground/10 bg-foreground/[0.035]">
+            <img
+              src="/side-projects/esp32-codex-agent-device.jpg"
+              alt="ESP32 Codex agent device showing a completed task"
+              className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.025]"
+            />
+          </div>
+          <div className="p-4">
+            <p className="mb-2 text-xs uppercase tracking-[0.16em] opacity-35">
+              open-source hardware
+            </p>
+            <h2 className="text-[15px] font-medium tracking-tight">
+              ESP32 Codex Agent Device
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed opacity-65">
+              A pocket-sized device that shows live Codex agent status,
+              elapsed time, token usage, and the model while I work.
+            </p>
+            <p className="mt-3 text-xs opacity-40">View on GitHub ↗</p>
+          </div>
+        </a>
       </div>
     </Container>
   );
