@@ -34,13 +34,31 @@ export const metadata: Metadata = {
   },
 };
 
-const events = [
+type UpcomingEvent = {
+  title: string;
+  date: string;
+  image: string;
+  status: "upcoming";
+  href: string;
+};
+
+type PastEvent = {
+  title: string;
+  date: string;
+  image: string;
+  status: "past";
+  detailHref: string;
+};
+
+type Event = UpcomingEvent | PastEvent;
+
+const events: readonly Event[] = [
   {
     title: "Touch Grass Club 001: Hampstead Heath",
     date: "29 August 2026",
-    image: "/events/touch-grass-pixel.png",
-    status: "upcoming",
-    href: "https://luma.com/583em4zg",
+    image: "/events/touch-grass-club-001-hero.jpg",
+    status: "past",
+    detailHref: "/events/touch-grass-club-001-hampstead-heath",
   },
   {
     title: "Coworking Session Vol. 3",
@@ -86,8 +104,12 @@ const events = [
   },
 ] as const;
 
-const upcomingEvents = events.filter((event) => event.status === "upcoming");
-const pastEvents = events.filter((event) => event.status === "past");
+const upcomingEvents = events.filter(
+  (event): event is UpcomingEvent => event.status === "upcoming",
+);
+const pastEvents = events.filter(
+  (event): event is PastEvent => event.status === "past",
+);
 
 export default function EventsPage() {
   return (
@@ -171,6 +193,9 @@ export default function EventsPage() {
                       ? "scale-[1.24] object-[center_48%]"
                       : event.title === "Coworking Session Vol. 2"
                         ? "scale-[1.12] object-center"
+                        : event.title ===
+                            "Touch Grass Club 001: Hampstead Heath"
+                          ? "scale-[1.08] object-[center_62%]"
                       : ""
                   }`}
                 />

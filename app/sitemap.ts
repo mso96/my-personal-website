@@ -21,6 +21,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/gallery", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/events", priority: 0.85, changeFrequency: "weekly" as const },
     {
+      path: "/events/touch-grass-club-001-hampstead-heath",
+      priority: 0.75,
+      changeFrequency: "monthly" as const,
+    },
+    {
       path: "/events/coworking-session-vol-3",
       priority: 0.75,
       changeFrequency: "monthly" as const,
