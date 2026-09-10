@@ -99,6 +99,29 @@ export default function SideProjectsPage() {
             <p className="mt-3 text-xs opacity-40">View project →</p>
           </div>
         </Link>
+
+        <Link
+          href="/side-projects/the-morning-post"
+          className="group overflow-hidden rounded-lg border border-foreground/10 bg-background transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-[0_14px_38px_rgba(0,0,0,0.07)]"
+        >
+          <div className="aspect-[1.91/1] overflow-hidden border-b border-foreground/10 bg-foreground/[0.035]">
+            <img
+              src="/side-projects/the-morning-post.jpg"
+              alt="The Morning Post live AI news channel"
+              className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.025]"
+            />
+          </div>
+          <div className="p-4">
+            <h2 className="text-[15px] font-medium tracking-tight">
+              The Morning Post
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed opacity-65">
+              A fake British news channel that turns any website into a short,
+              deeply serious AI television report.
+            </p>
+            <p className="mt-3 text-xs opacity-40">View project →</p>
+          </div>
+        </Link>
       </div>
     </Container>
   );

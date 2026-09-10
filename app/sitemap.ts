@@ -68,6 +68,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.75,
       changeFrequency: "monthly" as const,
     },
+    {
+      path: "/side-projects/the-morning-post",
+      priority: 0.75,
+      changeFrequency: "monthly" as const,
+    },
   ].map((route) => ({
     url: `${baseUrl}${route.path}`,
     changeFrequency: route.changeFrequency,
