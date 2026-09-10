@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 const steps = [
   "You submit a public website URL.",
   "A Cloudflare Worker reads the site and creates a simple visual joke with a short British voiceover.",
-  "Prodia generates a 15-second video while the current broadcast keeps playing.",
+  "MiniMax H3 Video generates a 15-second report through Prodia while the current broadcast keeps playing.",
   "The finished report is saved to R2, added to the shared playlist, and cut into the live channel.",
 ] as const;
 
@@ -124,8 +124,8 @@ export default function TheMorningPostPage() {
             Try it or take it apart
           </p>
           <p className="max-w-xl text-sm leading-relaxed opacity-70">
-            Built with React, Cloudflare Workers, R2, and Prodia. The whole
-            project is open source.
+            Built with React, Cloudflare Workers, R2, MiniMax H3 Video, and
+            Prodia. The whole project is open source.
           </p>
           <div className="mt-5 flex flex-wrap gap-2.5">
             <a
