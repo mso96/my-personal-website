@@ -33,6 +33,14 @@ const gear = [
     name: "Arrma QUAKE 223S",
     image: "/tech-gear/arrma-quake-223s.svg",
   },
+  {
+    name: "Fujifilm X-T50",
+    image: "/tech-gear/fujifilm-x-t50.png",
+  },
+  {
+    name: "Anker Power Bank 165W",
+    image: "/tech-gear/anker-power-bank-165w.png",
+  },
 ] as const;
 
 export default function TechGearPage() {
