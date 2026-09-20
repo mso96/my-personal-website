@@ -19,7 +19,7 @@ const gear = [
   },
   {
     name: "DJI Osmo Pocket 3",
-    image: "/tech-gear/dji-osmo-pocket-3.svg",
+    image: "/tech-gear/dji-osmo-pocket-3.png",
   },
   {
     name: "DJI Mini 4 Pro Drone",
