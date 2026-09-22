@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     url: "https://sefaoruc.com/events",
     images: [
       {
-        url: "/events/coworking-session-vol-3-hero.jpg",
-        width: 1536,
-        height: 1024,
-        alt: "Coworking Session Vol. 3",
+        url: "/events/coworking-session-vol-4-hero.jpg",
+        width: 1800,
+        height: 1200,
+        alt: "Coworking Session Vol. 4",
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Events | Sefa Oruc",
     description:
       "Upcoming and past events hosted, organised, and supported by Sefa Oruc in London.",
-    images: ["/events/coworking-session-vol-3-hero.jpg"],
+    images: ["/events/coworking-session-vol-4-hero.jpg"],
   },
   alternates: {
     canonical: "https://sefaoruc.com/events",
@@ -53,6 +53,13 @@ type PastEvent = {
 type Event = UpcomingEvent | PastEvent;
 
 const events: readonly Event[] = [
+  {
+    title: "Coworking Session Vol. 4",
+    date: "22 September 2026",
+    image: "/events/coworking-session-vol-4-hero.jpg",
+    status: "past",
+    detailHref: "/events/coworking-session-vol-4",
+  },
   {
     title: "Touch Grass Club 001: Hampstead Heath",
     date: "29 August 2026",
