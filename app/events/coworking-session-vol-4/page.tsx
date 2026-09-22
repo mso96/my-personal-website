@@ -7,18 +7,18 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Coworking Session Vol. 4",
   description:
-    "The fourth coworking session with builders at Andaz Adam's Court in London.",
+    "The fourth coworking session with builders at Andrea Adam's Court in London.",
   openGraph: {
     title: "Coworking Session Vol. 4 | Sefa Oruc",
     description:
-      "The fourth coworking session with builders at Andaz Adam's Court in London.",
+      "The fourth coworking session with builders at Andrea Adam's Court in London.",
     url: "https://sefaoruc.com/events/coworking-session-vol-4",
     images: [
       {
         url: "/events/coworking-session-vol-4-hero.jpg",
         width: 1800,
         height: 1200,
-        alt: "Coworking Session Vol. 4 attendees at Andaz Adam's Court",
+        alt: "Coworking Session Vol. 4 attendees at Andrea Adam's Court",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Coworking Session Vol. 4 | Sefa Oruc",
     description:
-      "The fourth coworking session with builders at Andaz Adam's Court in London.",
+      "The fourth coworking session with builders at Andrea Adam's Court in London.",
     images: ["/events/coworking-session-vol-4-hero.jpg"],
   },
   alternates: {
@@ -41,7 +41,7 @@ const photos = [
   },
   {
     src: "/events/coworking-session-vol-4-working-2.jpg",
-    alt: "Builders gathering at Andaz Adam's Court in London",
+    alt: "Builders gathering at Andrea Adam's Court in London",
   },
   {
     src: "/events/coworking-session-vol-4-working-3.jpg",
@@ -61,7 +61,7 @@ export default function CoworkingSessionVol4Page() {
 
       <header className="mb-8">
         <p className="mb-3 text-xs uppercase tracking-[0.16em] opacity-40">
-          22 September 2026 · Andaz Adam&apos;s Court, London
+          22 September 2026 · Andrea Adam&apos;s Court, London
         </p>
         <h1 className="text-2xl font-medium tracking-tight">
           Coworking Session Vol. 4
@@ -71,14 +71,14 @@ export default function CoworkingSessionVol4Page() {
       <figure className="mb-8 aspect-[16/9] overflow-hidden rounded-lg border border-foreground/10 bg-foreground/[0.035]">
         <img
           src="/events/coworking-session-vol-4-hero.jpg"
-          alt="Coworking Session Vol. 4 attendees at Andaz Adam's Court"
+          alt="Coworking Session Vol. 4 attendees at Andrea Adam's Court"
           className="block h-full w-full object-cover object-center"
         />
       </figure>
 
       <div className="mb-10 max-w-xl space-y-5 text-[15px] leading-relaxed opacity-80">
         <p>
-          Hosted our fourth coworking session today at the very fancy Andaz
+          Hosted our fourth coworking session today at the very fancy Andrea
           Adam&apos;s Court in London :)
         </p>
         <p>
