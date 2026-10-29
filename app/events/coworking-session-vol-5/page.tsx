@@ -72,7 +72,7 @@ export default function CoworkingSessionVol5Page() {
         <img
           src="/events/coworking-session-vol-5-hero.jpg"
           alt="Builders at Coworking Session Vol. 5"
-          className="block h-full w-full object-cover object-center"
+          className="block h-full w-full object-cover object-[center_72%]"
         />
       </figure>
 
